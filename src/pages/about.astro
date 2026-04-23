@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlockDecoration from '../components/BlockDecoration.astro';
+import appIcon from '../assets/app-icon-512.png';
+
+const title = 'About — Block Kitz';
+const description =
+  'Block Kitz is made by Kimberly, a solo indie developer. Learn why it exists, how it was built, and the promises behind every design choice.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="bb-stars relative overflow-hidden pt-10 pb-12 md:pt-16 md:pb-16">
+    <BlockDecoration />
+    <div class="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">About</p>
+      <h1 class="mt-4 text-4xl font-extrabold text-white md:text-5xl">
+        One developer. <span class="text-bb-pink">Lots of love.</span>
+      </h1>
+      <p class="mt-4 text-lg text-bb-text-dim">
+        Block Kitz is made by Kimberly — a solo indie developer who wanted a block puzzle good enough for her own family.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative mx-auto max-w-3xl px-5 md:px-8">
+    <div class="rounded-[32px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:p-10">
+      <div class="flex items-center gap-5">
+        <Image
+          src={appIcon}
+          alt="Block Kitz app icon"
+          width={96}
+          height={96}
+          class="h-20 w-20 rounded-3xl shadow-xl ring-1 ring-white/10"
+        />
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-bb-text-faded">Developer</p>
+          <p class="font-display text-2xl font-extrabold text-white">Kimberly</p>
+          <p class="text-sm text-bb-text-dim">Solo indie — design, code, audio, everything.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 space-y-5 text-bb-text-dim">
+        <p>
+          I'm Kimberly — the designer, developer, and tester of Block Kitz. I started this project because I wanted a <strong class="text-white">cozy block-puzzle game</strong> I'd be happy to hand my own kid, and I couldn't find one. Everything I tried was drowning in forced ads, flashy monetization, or data-hungry tracking.
+        </p>
+        <p>
+          So I built my own. Every pixel, every puzzle layout, every sound effect was hand-picked or hand-tuned. The goal was never "make the most money" — it was "make something kids and parents can trust."
+        </p>
+        <p>
+          That's why Block Kitz has <strong class="text-white">zero data collection</strong>, <strong class="text-white">zero forced ads</strong>, and a <strong class="text-white">parental gate on every purchase</strong>. It's why the spin wheel awards only free in-game coins, never randomized paid outcomes. It's why the music is four calm ambient piano moods, not a pumping arcade soundtrack.
+        </p>
+        <p>
+          Block Kitz is designed to be <strong class="text-white">the block puzzle I'd want my own family to play</strong> — and if it ends up being yours too, that's the whole point.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promises -->
+  <section class="relative mx-auto mt-16 max-w-4xl px-5 md:px-8">
+    <div class="mx-auto mb-8 max-w-2xl text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">
+        The <span class="text-bb-primary">promises</span>
+      </h2>
+      <p class="mt-3 text-bb-text-dim">Design rules I will never break.</p>
+    </div>
+
+    <ul class="grid gap-4 md:grid-cols-2">
+      {
+        [
+          ['🛡️', 'No data collection — ever.', 'Your progress stays on your device. Nothing is sent anywhere.'],
+          ['🎯', 'No forced ads.',              'Optional "Watch Ad" rewards only. The game is fully playable without a single ad.'],
+          ['💬', 'No chat. No social.',         'No strangers can reach your child through Block Kitz.'],
+          ['🎡', 'No gambling mechanics.',      'The spin wheel awards only free in-game coins. No mystery paid boxes.'],
+          ['🧒', 'Parental gate on purchases.', 'A simple math problem stops accidental taps before the payment screen.'],
+          ['📴', '100% offline play.',          'No internet required. No login. No account. No sign-up.'],
+        ].map(([icon, head, body]) => (
+          <li class="flex gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <span class="text-2xl" aria-hidden="true">{icon}</span>
+            <div>
+              <p class="font-bold text-white">{head}</p>
+              <p class="mt-1 text-sm text-bb-text-dim">{body}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="relative mx-auto mt-16 max-w-3xl px-5 text-center md:px-8">
+    <p class="text-bb-text-dim">
+      Questions, bug reports, or just want to say hi?
+    </p>
+    <a
+      href="mailto:support@blockkitz.com"
+      class="mt-3 inline-block font-display text-xl font-extrabold text-bb-primary hover:underline"
+    >
+      support@blockkitz.com
+    </a>
+    <p class="mt-4 text-xs text-bb-text-faded">I read every email myself.</p>
+  </section>
+</BaseLayout>

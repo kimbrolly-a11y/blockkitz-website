@@ -1,0 +1,108 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+// This layout is consumed in two shapes:
+//   1. MDX pages using `layout: ../layouts/LegalLayout.astro` — Astro passes
+//      the frontmatter under `Astro.props.frontmatter`.
+//   2. Direct .astro usage with explicit props on the component.
+// Support both by merging.
+const fm = (Astro.props as any).frontmatter ?? {};
+const title: string = Astro.props.title ?? fm.title ?? 'Legal';
+const description: string = Astro.props.description ?? fm.description ?? '';
+const lastUpdated: string = Astro.props.lastUpdated ?? fm.lastUpdated ?? '';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="relative mx-auto max-w-3xl px-5 pt-10 pb-16 md:px-8 md:pt-16">
+    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">
+      Legal
+    </p>
+    <p class="mt-6 text-sm text-bb-text-faded">
+      Last updated: <time>{lastUpdated}</time>
+    </p>
+
+    <div class="prose-bb mt-8">
+      <slot />
+    </div>
+
+    <div class="mt-12 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 text-sm text-bb-text-dim">
+      Questions? Email
+      <a href="mailto:support@blockkitz.com" class="font-semibold text-bb-primary hover:underline">
+        support@blockkitz.com
+      </a>.
+    </div>
+  </article>
+</BaseLayout>
+
+<style is:global>
+  /* Scoped prose styles for the legal layout — kid/parent-friendly reading */
+  .prose-bb h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    color: #fff;
+    margin-top: 0.5rem;
+  }
+  .prose-bb h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-bb h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-bb p,
+  .prose-bb li {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+  .prose-bb p {
+    margin: 1rem 0;
+  }
+  .prose-bb strong {
+    color: #fff;
+    font-weight: 700;
+  }
+  .prose-bb a {
+    color: #ffd700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .prose-bb a:hover {
+    text-decoration-thickness: 2px;
+  }
+  .prose-bb ul, .prose-bb ol {
+    margin: 1rem 0 1rem 1.5rem;
+    padding-left: 0.5rem;
+  }
+  .prose-bb ul { list-style: disc; }
+  .prose-bb ol { list-style: decimal; }
+  .prose-bb li { margin: 0.4rem 0; }
+  .prose-bb li::marker { color: rgba(255, 215, 0, 0.7); }
+  .prose-bb blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #ffd700;
+    background: rgba(255, 215, 0, 0.06);
+    border-radius: 0 14px 14px 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .prose-bb blockquote p { margin: 0.4rem 0; }
+  .prose-bb code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.15em 0.4em;
+    border-radius: 6px;
+    color: #ffd9b0;
+  }
+  .prose-bb hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+  }
+</style>

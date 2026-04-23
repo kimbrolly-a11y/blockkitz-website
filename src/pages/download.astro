@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlockDecoration from '../components/BlockDecoration.astro';
+import appIcon from '../assets/app-icon-512.png';
+
+const title = 'Download Block Kitz';
+const description =
+  'Download Block Kitz free for Android. Family-safe puzzle game with 1,000+ levels, three modes, zero forced ads, and no data collection.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="bb-stars relative overflow-hidden pt-10 pb-12 md:pt-16 md:pb-16">
+    <BlockDecoration />
+    <div class="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-8">
+      <Image
+        src={appIcon}
+        alt="Block Kitz app icon"
+        width={140}
+        height={140}
+        loading="eager"
+        class="mx-auto h-32 w-32 rounded-[28px] shadow-[0_12px_40px_rgba(0,0,0,0.5)] ring-1 ring-white/10 md:h-36 md:w-36"
+      />
+      <p class="mt-6 text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">
+        Download
+      </p>
+      <h1 class="mt-3 text-4xl font-extrabold text-white md:text-5xl">
+        Free. Forever. <span class="text-bb-pink">Offline.</span>
+      </h1>
+      <p class="mt-4 text-lg text-bb-text-dim">
+        Block Kitz is free to download and free to play. No sign-up. No tracking. Just blocks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Primary download paths -->
+  <section class="relative mx-auto max-w-4xl px-5 md:px-8">
+    <div class="grid gap-5 md:grid-cols-2">
+      <!-- Play Store (pending) -->
+      <article class="relative flex flex-col gap-4 rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:p-8">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-bb-success to-bb-info text-xl shadow-lg" aria-hidden="true">▶</span>
+          <h2 class="text-xl font-extrabold text-white">Google Play Store</h2>
+          <span class="ml-auto rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-bb-text-faded">
+            Coming soon
+          </span>
+        </div>
+        <p class="text-sm text-bb-text-dim">
+          Our Play Store listing is in review. Once it's live, you'll be able to install Block Kitz with a single tap — and get automatic updates from then on. We'll update this page as soon as approval lands.
+        </p>
+        <button
+          type="button"
+          disabled
+          class="mt-auto inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full bg-white/10 px-5 py-3 font-semibold text-bb-text-faded ring-1 ring-white/10"
+          aria-disabled="true"
+        >
+          <span aria-hidden="true">🔒</span>
+          <span>Play Store — pending approval</span>
+        </button>
+      </article>
+
+      <!-- Direct APK -->
+      <article class="relative flex flex-col gap-4 rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:p-8">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-bb-primary to-bb-primary-dark text-xl shadow-lg" aria-hidden="true">⬇️</span>
+          <h2 class="text-xl font-extrabold text-white">Direct APK download</h2>
+          <span class="ml-auto rounded-full bg-bb-success/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-bb-success ring-1 ring-bb-success/30">
+            Available now
+          </span>
+        </div>
+        <p class="text-sm text-bb-text-dim">
+          Download the latest build directly. Android will ask you to allow "Install from unknown sources" the first time — that's expected for sideloaded apps. ~48 MB. Android 5.0+.
+        </p>
+        <a
+          href="/BlockKitz-debug.apk"
+          download
+          class="bb-btn mt-auto"
+        >
+          <span aria-hidden="true">⬇️</span>
+          <span>Download APK (48 MB)</span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Quick facts -->
+  <section class="relative mx-auto mt-16 max-w-4xl px-5 md:px-8">
+    <div class="rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:p-8">
+      <h2 class="text-xl font-extrabold text-white">The quick facts</h2>
+      <dl class="mt-6 grid gap-4 sm:grid-cols-2">
+        {
+          [
+            ['Platform',     'Android 5.0+ (iOS planned)'],
+            ['Size',         '~48 MB'],
+            ['Orientation',  'Portrait'],
+            ['Age rating',   'Everyone / PEGI 3 / USK 0'],
+            ['Languages',    'English (v1)'],
+            ['Internet',     'Not required for gameplay'],
+            ['Permissions',  'Internet (optional ads only)'],
+            ['Price',        'Free — optional coin packs'],
+          ].map(([k, v]) => (
+            <div class="flex flex-col gap-1 rounded-2xl bg-white/5 p-4 ring-1 ring-white/5">
+              <dt class="text-xs font-semibold uppercase tracking-[0.15em] text-bb-text-faded">{k}</dt>
+              <dd class="font-semibold text-white">{v}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <!-- Parents/safety link -->
+  <section class="relative mx-auto mt-16 max-w-3xl px-5 text-center md:px-8">
+    <p class="text-bb-text-dim">
+      For parents: read about how Block Kitz keeps kids safe on our
+      <a href="/safety" class="font-semibold text-bb-primary hover:underline">
+        Children's Safety page
+      </a>.
+    </p>
+  </section>
+</BaseLayout>

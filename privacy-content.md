@@ -1,0 +1,97 @@
+# Privacy Policy
+
+**Block Kitz · Last updated: April 2026**
+
+> **Kid-friendly short version:** Block Kitz is safe for players of all ages, including children. We don't collect any personal information. Your game progress stays on your device. Nothing is sent to us, and nothing is shared with anyone.
+
+## 1. Who We Are
+
+Block Kitz is published by the developer named below. This policy covers the Block Kitz game on the web at blockkitz.com and any mobile app versions.
+
+- **Developer:** Kimberly (independent developer)
+- **Contact email:** [support@blockkitz.com](mailto:support@blockkitz.com)
+
+If you are a parent or guardian and have questions, please email us at the address above.
+
+## 2. What Data We Collect
+
+Block Kitz itself does **not** collect or store any of the following:
+
+- Names, email addresses, phone numbers, or physical addresses
+- Location, contacts, photos, microphone, or camera data
+- Usage analytics or crash reports
+- Payment details (handled entirely by Google Play Billing)
+
+The only data processed on our behalf comes from **Google AdMob**, which shows optional rewarded video ads (see Section 5). Those ads may access your device's advertising identifier and similar technical signals *only* to serve an ad and measure delivery — never to build a profile about you.
+
+When Google Play asks about data collection on our Data Safety form, our answer is:
+
+- **Device or other IDs** — collected, not shared, optional, used for app functionality (ad delivery).
+- **All other categories** — not collected.
+
+## 3. What Stays on Your Device
+
+The game saves a small amount of information **locally on your device**, using browser localStorage or native app storage. This data never leaves your phone. It includes:
+
+- Game progress (levels, stars, chapters)
+- In-game coins, power-ups, and achievements
+- Your settings (sound, music, mute)
+- Optional display name you choose to enter — only visible on your device
+
+You can delete all of this at any time by uninstalling the app or using "Clear App Data" in your device settings.
+
+## 4. Children's Privacy (COPPA & GDPR Article 8)
+
+Block Kitz is suitable for all ages, including children. We take children's privacy seriously and comply with:
+
+- The U.S. **Children's Online Privacy Protection Act (COPPA)** — we do not knowingly collect personal information from children under 13.
+- The EU **General Data Protection Regulation (GDPR) Article 8** on the protection of children.
+- The UK **Age Appropriate Design Code** (Children's Code) issued by the ICO.
+- Google Play's **Families Policy**.
+
+Because the ads we show are **non-personalized** and configured for child-directed treatment (see Section 5), we do not knowingly collect personal information from children under 13 in the sense prohibited by COPPA.
+
+**Parents:** ads in Block Kitz are entirely *optional* — the player chooses when to watch one (for a revive or bonus coins). There are no forced ads, no interstitials, and no banner ads. We recommend enabling parental controls and requiring a password for in-app purchases on your child's device.
+
+## 5. Third-Party Services
+
+Block Kitz integrates the following third-party services:
+
+### Google AdMob
+Used to show optional rewarded video ads when the player taps "Watch Ad for Revive" or "Watch Ad for x2 Coins." AdMob is configured with:
+
+- `tagForChildDirectedTreatment = true` (COPPA treatment)
+- `tagForUnderAgeOfConsent = true` (GDPR Article 8 treatment)
+- `maxAdContentRating = G` (General audience only)
+- `npa = true` (non-personalized ads only — no behavioral tracking, no remarketing)
+
+This means AdMob serves only contextual, general-audience ads. No ads for gambling, dating, alcohol, or other age-restricted content are shown. For AdMob's data handling, see [Google's Privacy Policy](https://policies.google.com/privacy).
+
+### Google Play Billing
+Used for optional coin purchases. Payment handling is done entirely by Google. We never see your payment details.
+
+Sound effects in Block Kitz were generated using ElevenLabs AI and are bundled with the app — no runtime connection is made to ElevenLabs during play.
+
+## 6. Legal Basis & Your Rights
+
+Under GDPR, processing of personal data requires a lawful basis. **We do not process personal data**, so GDPR Article 6 does not apply. Even so, depending on where you live, you have the following rights:
+
+- **Right to access:** your data lives on your device and you can see it there.
+- **Right to deletion:** uninstall the app or clear app data to remove everything.
+- **Right to contact us:** email [support@blockkitz.com](mailto:support@blockkitz.com) for any question about this policy.
+
+## 7. Cookies & Tracking
+
+Block Kitz uses browser localStorage only — purely to save your own game progress on your own device. We do **not** use tracking cookies, advertising cookies, analytics cookies, or any third-party cookies.
+
+## 8. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Changes will be posted here with an updated "Last updated" date. If we ever add any third-party service that could affect children, we will update this policy **before** that feature is enabled and clearly notify players.
+
+## 9. Contact
+
+Questions from players, parents, or guardians:
+
+- Email: [support@blockkitz.com](mailto:support@blockkitz.com)
+
+*Effective Date: April 14, 2026*

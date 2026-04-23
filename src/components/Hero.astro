@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/Title_logo.png';
+import BlockDecoration from './BlockDecoration.astro';
+---
+
+<section class="bb-stars relative overflow-hidden pt-8 pb-20 md:pt-14 md:pb-28">
+  <BlockDecoration />
+
+  <div class="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-5 text-center md:px-8">
+    <Image
+      src={logo}
+      alt="Block Kitz"
+      width={640}
+      height={270}
+      loading="eager"
+      class="w-[min(86vw,560px)] drop-shadow-[0_16px_32px_rgba(0,0,0,0.45)]"
+    />
+
+    <p class="mt-8 max-w-2xl text-lg leading-relaxed text-bb-text-dim md:text-xl">
+      Place. Pop. Play.
+      <span class="block mt-1 text-bb-text-faded">
+        The cozy block puzzle for everyone — with
+        <span class="font-bold text-bb-primary">1,000+ levels</span>,
+        <span class="font-bold text-bb-success">zero data collected</span>, and
+        <span class="font-bold text-bb-pink">zero forced ads</span>.
+      </span>
+    </p>
+
+    <div class="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
+      <a href="/download" class="bb-btn">
+        <span aria-hidden="true">🎮</span>
+        <span>Download Free</span>
+      </a>
+      <a href="/features" class="bb-btn bb-btn--ghost">
+        See what's inside
+      </a>
+    </div>
+
+    <p class="mt-5 text-xs font-medium uppercase tracking-[0.25em] text-bb-text-faded">
+      Android • Ages 3+ • 100% offline
+    </p>
+  </div>
+</section>

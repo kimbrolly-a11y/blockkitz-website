@@ -1,0 +1,7 @@
+# Block Kitz — blockkitz.com
+# We want every crawler to find us. Play Console reviewers also check this file.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://blockkitz.com/sitemap-index.xml

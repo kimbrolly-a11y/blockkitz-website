@@ -1,0 +1,102 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/Title_logo.png';
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/features', label: 'Features' },
+  { href: '/screenshots', label: 'Screenshots' },
+  { href: '/download', label: 'Download' },
+  { href: '/support', label: 'Support' },
+  { href: '/privacy', label: 'Privacy' },
+];
+
+const current = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="relative z-20 w-full">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8 md:py-6">
+    <a href="/" class="flex items-center gap-3" aria-label="Block Kitz home">
+      <Image
+        src={logo}
+        alt="Block Kitz"
+        width={160}
+        height={68}
+        loading="eager"
+        class="h-10 w-auto md:h-12"
+      />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav aria-label="Primary" class="hidden md:block">
+      <ul class="flex items-center gap-1 text-bb-text-dim">
+        {
+          nav.map((item) => {
+            const active = current === item.href;
+            return (
+              <li>
+                <a
+                  href={item.href}
+                  aria-current={active ? 'page' : undefined}
+                  class:list={[
+                    'rounded-full px-4 py-2 font-semibold transition hover:bg-white/10 hover:text-white',
+                    active && 'bg-white/15 text-white',
+                  ]}
+                >
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+
+    <!-- Mobile toggle — CSS-only via <input type=checkbox> -->
+    <input type="checkbox" id="nav-toggle" class="peer sr-only" aria-hidden="true" />
+    <label
+      for="nav-toggle"
+      class="md:hidden inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+      aria-label="Open menu"
+    >
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <path class="open-icon" d="M4 7h16M4 12h16M4 17h16" />
+        <path class="close-icon hidden" d="M6 6l12 12M6 18L18 6" />
+      </svg>
+    </label>
+
+    <!-- Mobile drawer -->
+    <nav
+      aria-label="Mobile"
+      class="absolute left-0 right-0 top-full mx-4 mt-2 origin-top scale-y-0 rounded-3xl bg-bb-bg-mid/95 p-4 shadow-2xl ring-1 ring-white/10 backdrop-blur-md transition peer-checked:scale-y-100 md:hidden"
+    >
+      <ul class="flex flex-col gap-1">
+        {
+          nav.map((item) => {
+            const active = current === item.href;
+            return (
+              <li>
+                <a
+                  href={item.href}
+                  aria-current={active ? 'page' : undefined}
+                  class:list={[
+                    'block rounded-2xl px-4 py-3 font-semibold text-bb-text-dim transition hover:bg-white/10 hover:text-white',
+                    active && 'bg-white/15 text-white',
+                  ]}
+                >
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* Swap hamburger ↔ close icon when toggle is checked */
+  .peer:checked ~ label .open-icon { display: none; }
+  .peer:checked ~ label .close-icon { display: inline; }
+</style>

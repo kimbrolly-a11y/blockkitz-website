@@ -1,0 +1,23 @@
+---
+// Decorative candy-block accents. Purely ornamental — aria-hidden.
+// Usage: <BlockDecoration /> placed inside a relatively-positioned container.
+const cubes = [
+  { c: '#ffd700', size: 64, top: '8%',  left: '6%',   r: -8,  d: '0s'   },
+  { c: '#ff3b6b', size: 44, top: '18%', left: '88%',  r: 12,  d: '0.8s' },
+  { c: '#22c55e', size: 54, top: '70%', left: '4%',   r: 6,   d: '1.4s' },
+  { c: '#9b4bff', size: 38, top: '82%', left: '78%',  r: -14, d: '2.1s' },
+  { c: '#2aa7ff', size: 48, top: '40%', left: '94%',  r: 4,   d: '2.8s' },
+  { c: '#ff8fae', size: 32, top: '58%', left: '10%',  r: -6,  d: '3.4s' },
+];
+---
+
+<div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+  {
+    cubes.map((cube) => (
+      <span
+        class="bb-cube bb-float"
+        style={`--c:${cube.c}; --r:${cube.r}deg; --d:${cube.d}; width:${cube.size}px; height:${cube.size}px; top:${cube.top}; left:${cube.left};`}
+      />
+    ))
+  }
+</div>
