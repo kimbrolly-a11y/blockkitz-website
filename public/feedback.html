@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beta Tester Feedback — Block Kitz</title>
+<meta name="description" content="Block Kitz beta tester feedback form. Help us polish the game before public launch.">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:linear-gradient(170deg,#0a0e27 0%,#0d1b5e 40%,#0a3d8f 100%);
+    color:#e3e9ff;min-height:100vh;padding:24px 20px 60px;line-height:1.5;
+  }
+  .wrap{max-width:680px;margin:0 auto}
+  .back{display:inline-block;margin-bottom:16px;padding:8px 14px;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.15);border-radius:20px;color:#fff;font-size:13px;text-decoration:none;transition:background .2s}
+  .back:hover{background:rgba(255,255,255,0.15)}
+  h1{font-family:'Fredoka One','Segoe UI',sans-serif;color:#ffd700;font-size:30px;margin-bottom:4px;text-shadow:0 2px 8px rgba(0,0,0,0.4)}
+  .sub{color:#90caf9;font-size:13px;margin-bottom:20px}
+  .intro{background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.25);border-radius:12px;padding:14px 18px;margin-bottom:28px;font-size:14px;color:#fff4cc}
+  .intro strong{color:#ffd700}
+  section{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 22px;margin-bottom:18px}
+  h2{font-family:'Fredoka One','Segoe UI',sans-serif;color:#64b5f6;font-size:18px;margin-bottom:14px;letter-spacing:.5px}
+  .q{margin-bottom:18px}
+  .q:last-child{margin-bottom:0}
+  label.lbl{display:block;color:#fff;font-weight:600;font-size:14.5px;margin-bottom:8px}
+  .req{color:#f48fb1;margin-left:2px}
+  .hint{display:block;color:rgba(255,255,255,0.55);font-size:12.5px;font-weight:400;margin-top:2px}
+  input[type=text], input[type=email], textarea, select{
+    width:100%;padding:10px 12px;font-size:15px;font-family:inherit;
+    background:rgba(0,0,0,0.25);color:#fff;
+    border:1.5px solid rgba(255,255,255,0.15);border-radius:8px;outline:none;
+    transition:border-color .15s;
+  }
+  input:focus, textarea:focus, select:focus{border-color:#ffd700}
+  textarea{min-height:84px;resize:vertical}
+  select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path fill='%23fff' d='M2 4l4 4 4-4z'/></svg>");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+  select option{background:#0d1b5e;color:#fff}
+  .radios, .checks{display:flex;flex-direction:column;gap:8px}
+  .radios label, .checks label{
+    display:flex;align-items:flex-start;gap:10px;padding:9px 12px;
+    background:rgba(0,0,0,0.2);border:1.5px solid rgba(255,255,255,0.1);
+    border-radius:8px;cursor:pointer;font-size:14px;transition:all .15s;
+  }
+  .radios label:hover, .checks label:hover{border-color:rgba(255,215,0,0.4);background:rgba(255,215,0,0.05)}
+  .radios input, .checks input{margin-top:2px;flex-shrink:0;accent-color:#ffd700}
+  .scale{display:flex;gap:6px;justify-content:space-between;align-items:center;margin-top:8px}
+  .scale label{
+    flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;
+    padding:10px 4px;background:rgba(0,0,0,0.25);border:1.5px solid rgba(255,255,255,0.12);
+    border-radius:8px;cursor:pointer;font-weight:600;transition:all .15s;
+  }
+  .scale label:hover{border-color:rgba(255,215,0,0.4)}
+  .scale input{display:none}
+  .scale input:checked + .num{color:#ffd700}
+  .scale label:has(input:checked){border-color:#ffd700;background:rgba(255,215,0,0.15)}
+  .num{font-size:18px;color:#fff}
+  .scale-ends{display:flex;justify-content:space-between;color:rgba(255,255,255,0.5);font-size:11px;margin-top:4px}
+  button.submit{
+    width:100%;padding:16px;margin-top:8px;
+    font-family:'Fredoka One','Segoe UI',sans-serif;font-size:18px;letter-spacing:.5px;
+    background:linear-gradient(180deg,#ffd700,#f9a825);color:#1a0b3d;
+    border:none;border-radius:14px;cursor:pointer;
+    box-shadow:0 4px 0 #8b5a00, 0 8px 20px rgba(0,0,0,0.4);
+    transition:transform .1s;
+  }
+  button.submit:hover{transform:translateY(-1px)}
+  button.submit:active{transform:translateY(2px);box-shadow:0 2px 0 #8b5a00}
+  button.submit:disabled{opacity:.6;cursor:wait}
+  .thanks{
+    text-align:center;padding:40px 24px;
+    background:rgba(102,187,106,0.12);border:1.5px solid rgba(102,187,106,0.4);
+    border-radius:16px;
+  }
+  .thanks h2{color:#86efac;font-size:28px;margin-bottom:10px}
+  .thanks p{font-size:15px;margin-bottom:10px}
+  .thanks .emoji{font-size:54px;margin-bottom:12px;display:block}
+  .err{background:rgba(244,143,177,0.15);border:1.5px solid rgba(244,143,177,0.5);border-radius:10px;padding:12px 16px;margin-top:12px;color:#ffcdd2;font-size:14px;display:none}
+  .err.show{display:block}
+  @media (max-width:480px){
+    body{padding:16px 12px 40px}
+    section{padding:14px 16px}
+    h1{font-size:26px}
+    .scale label{padding:8px 2px}
+    .num{font-size:16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="/" class="back">← Back to Game</a>
+  <h1>🎮 Beta Tester Feedback</h1>
+  <div class="sub">Block Kitz v1.0.1 · Closed Testing</div>
+
+  <div class="intro">
+    Thanks for testing Block Kitz! 🙏 This form takes <strong>~4 minutes</strong>. Your honest feedback — especially bug reports — directly shapes what ships publicly. Be brutal; bugs help us more than compliments.
+  </div>
+
+  <form id="fbForm" action="https://formsubmit.co/kimberly.blockkitz@gmail.com" method="POST" novalidate>
+    <!-- FormSubmit config -->
+    <input type="hidden" name="_subject" value="🎮 Block Kitz — New Beta Feedback">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://blockblitz-eight.vercel.app/feedback.html?submitted=1">
+
+    <!-- ── SECTION 1: About You ── -->
+    <section>
+      <h2>1. About You</h2>
+
+      <div class="q">
+        <label class="lbl" for="name">Your name or nickname<span class="req">*</span></label>
+        <input type="text" id="name" name="Name" required maxlength="60">
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="phone">Phone brand<span class="req">*</span></label>
+        <select id="phone" name="Phone brand" required>
+          <option value="">Select one…</option>
+          <option>Samsung</option>
+          <option>Google Pixel</option>
+          <option>Xiaomi / Redmi</option>
+          <option>OnePlus</option>
+          <option>Oppo / Vivo / Realme</option>
+          <option>Motorola</option>
+          <option>Huawei / Honor</option>
+          <option>Other Android</option>
+          <option>iPhone (sorry, we're Android-only for now)</option>
+        </select>
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="model">Exact phone model + Android version
+          <span class="hint">e.g. "Samsung Galaxy S23 / Android 14" — check Settings → About phone</span>
+        </label>
+        <input type="text" id="model" name="Phone model" maxlength="80">
+      </div>
+    </section>
+
+    <!-- ── SECTION 2: Install ── -->
+    <section>
+      <h2>2. Install Experience</h2>
+
+      <div class="q">
+        <label class="lbl">Were you able to install the game?<span class="req">*</span></label>
+        <div class="radios">
+          <label><input type="radio" name="Install result" value="Installed first try" required> Yes, installed on first try</label>
+          <label><input type="radio" name="Install result" value="Installed with trouble"> Yes, but had trouble</label>
+          <label><input type="radio" name="Install result" value="Install failed"> No, install failed</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="install-issue">If install had issues, what happened?
+          <span class="hint">Error message, got stuck on a screen, couldn't find the app, etc.</span>
+        </label>
+        <textarea id="install-issue" name="Install issue" maxlength="600"></textarea>
+      </div>
+
+      <div class="q">
+        <label class="lbl">First impression when the game opened<span class="req">*</span>
+          <span class="hint">1 = confusing / ugly, 5 = great / polished</span>
+        </label>
+        <div class="scale">
+          <label><input type="radio" name="First impression" value="1" required><span class="num">1</span></label>
+          <label><input type="radio" name="First impression" value="2"><span class="num">2</span></label>
+          <label><input type="radio" name="First impression" value="3"><span class="num">3</span></label>
+          <label><input type="radio" name="First impression" value="4"><span class="num">4</span></label>
+          <label><input type="radio" name="First impression" value="5"><span class="num">5</span></label>
+        </div>
+        <div class="scale-ends"><span>Confusing</span><span>Great</span></div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: Gameplay & Bugs ── -->
+    <section>
+      <h2>3. Gameplay &amp; Bugs</h2>
+
+      <div class="q">
+        <label class="lbl">Which modes did you play? (tick all that apply)<span class="req">*</span></label>
+        <div class="checks">
+          <label><input type="checkbox" name="Modes played" value="Classic"> Classic</label>
+          <label><input type="checkbox" name="Modes played" value="Pivot Blocks"> Pivot Blocks</label>
+          <label><input type="checkbox" name="Modes played" value="Adventure"> Adventure</label>
+          <label><input type="checkbox" name="Modes played" value="Daily Challenge / Daily Tasks"> Daily Challenge / Daily Tasks</label>
+          <label><input type="checkbox" name="Modes played" value="Endless / League"> Endless / League</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="lbl">Adventure mode — was the board the correct size?<span class="req">*</span>
+          <span class="hint">We recently fixed a bug where Adventure cells were out of proportion — help us verify it's gone!</span>
+        </label>
+        <div class="radios">
+          <label><input type="radio" name="Adventure board size" value="Correct - 8x8 with tray" required> ✅ Board looked square (8×8) with 3 pieces I could pick up</label>
+          <label><input type="radio" name="Adventure board size" value="Wrong - stretched or missing pieces"> ❌ Board was stretched / pieces missing / something wrong</label>
+          <label><input type="radio" name="Adventure board size" value="Did not try Adventure"> I didn't try Adventure mode</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="lbl">Did you encounter any of these bugs? (tick all that apply)</label>
+        <div class="checks">
+          <label><input type="checkbox" name="Bugs" value="Crashed or froze"> Game crashed or froze</label>
+          <label><input type="checkbox" name="Bugs" value="Could not pick up pieces"> Couldn't pick up pieces</label>
+          <label><input type="checkbox" name="Bugs" value="Stuck on level"> Got stuck on a level (no way to progress)</label>
+          <label><input type="checkbox" name="Bugs" value="Tutorial issue"> Tutorial didn't show or was confusing</label>
+          <label><input type="checkbox" name="Bugs" value="Sound / music issue"> Sound / music problems</label>
+          <label><input type="checkbox" name="Bugs" value="Text overlapping / cut off"> Text overlapping or cut off</label>
+          <label><input type="checkbox" name="Bugs" value="Ads broken"> Ads didn't load / showed weird</label>
+          <label><input type="checkbox" name="Bugs" value="Buttons unresponsive"> Buttons didn't respond when tapped</label>
+          <label><input type="checkbox" name="Bugs" value="Performance / slow / laggy"> Game ran slow / laggy</label>
+          <label><input type="checkbox" name="Bugs" value="None - smooth"> 🎉 None — it ran smoothly!</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="bug-detail">Describe any bug in detail
+          <span class="hint">What mode, what level, what you were doing, what went wrong. The more detail, the faster we can fix it.</span>
+        </label>
+        <textarea id="bug-detail" name="Bug detail" maxlength="1500"></textarea>
+      </div>
+    </section>
+
+    <!-- ── SECTION 4: Fun & UX ── -->
+    <section>
+      <h2>4. Fun &amp; UX</h2>
+
+      <div class="q">
+        <label class="lbl">How fun is the game?<span class="req">*</span>
+          <span class="hint">1 = boring, 5 = addictive</span>
+        </label>
+        <div class="scale">
+          <label><input type="radio" name="Fun rating" value="1" required><span class="num">1</span></label>
+          <label><input type="radio" name="Fun rating" value="2"><span class="num">2</span></label>
+          <label><input type="radio" name="Fun rating" value="3"><span class="num">3</span></label>
+          <label><input type="radio" name="Fun rating" value="4"><span class="num">4</span></label>
+          <label><input type="radio" name="Fun rating" value="5"><span class="num">5</span></label>
+        </div>
+        <div class="scale-ends"><span>Boring</span><span>Addictive</span></div>
+      </div>
+
+      <div class="q">
+        <label class="lbl">How easy to understand?<span class="req">*</span>
+          <span class="hint">1 = confusing, 5 = obvious</span>
+        </label>
+        <div class="scale">
+          <label><input type="radio" name="Ease rating" value="1" required><span class="num">1</span></label>
+          <label><input type="radio" name="Ease rating" value="2"><span class="num">2</span></label>
+          <label><input type="radio" name="Ease rating" value="3"><span class="num">3</span></label>
+          <label><input type="radio" name="Ease rating" value="4"><span class="num">4</span></label>
+          <label><input type="radio" name="Ease rating" value="5"><span class="num">5</span></label>
+        </div>
+        <div class="scale-ends"><span>Confusing</span><span>Obvious</span></div>
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="liked">What did you like most?</label>
+        <textarea id="liked" name="Liked most" maxlength="800"></textarea>
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="annoyed">What annoyed you or needs improvement?</label>
+        <textarea id="annoyed" name="Needs improvement" maxlength="800"></textarea>
+      </div>
+
+      <div class="q">
+        <label class="lbl">Would you recommend it to a friend or your kid?<span class="req">*</span></label>
+        <div class="radios">
+          <label><input type="radio" name="Recommend" value="Definitely" required> Definitely</label>
+          <label><input type="radio" name="Recommend" value="Maybe"> Maybe</label>
+          <label><input type="radio" name="Recommend" value="Probably not"> Probably not</label>
+          <label><input type="radio" name="Recommend" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="other">Anything else? (bug reports, feature ideas, anything)</label>
+        <textarea id="other" name="Other feedback" maxlength="1500"></textarea>
+      </div>
+
+      <div class="q">
+        <label class="lbl" for="email">Your email (optional)
+          <span class="hint">Only if you want Kimberly to reply. Never used for anything else.</span>
+        </label>
+        <input type="email" id="email" name="Reply email" maxlength="120">
+      </div>
+    </section>
+
+    <button type="submit" class="submit" id="submitBtn">Send Feedback 🚀</button>
+    <div class="err" id="errBox"></div>
+  </form>
+
+  <!-- Thank-you view shown after submit or via ?submitted=1 -->
+  <div class="thanks" id="thanksBox" style="display:none">
+    <span class="emoji">🎉</span>
+    <h2>Thank you!</h2>
+    <p>Your feedback has been sent to Kimberly. Every response matters — this is how Block Kitz gets better before public launch.</p>
+    <p><strong>Please keep the app installed for the next 14 days</strong> — that's what Google's review counts.</p>
+    <p style="margin-top:20px"><a href="/" class="back" style="display:inline-block">← Back to Game</a></p>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Show thank-you view if redirected back with ?submitted=1
+  if(location.search.indexOf('submitted=1')>=0){
+    document.getElementById('fbForm').style.display='none';
+    document.querySelector('.intro').style.display='none';
+    document.getElementById('thanksBox').style.display='block';
+    // Scroll to top so they see the thank-you
+    window.scrollTo(0,0);
+    return;
+  }
+
+  var form = document.getElementById('fbForm');
+  var btn = document.getElementById('submitBtn');
+  var err = document.getElementById('errBox');
+
+  form.addEventListener('submit', function(e){
+    // Basic native validation
+    if(!form.checkValidity()){
+      err.textContent = '⚠️ Please fill in the required questions (marked with *).';
+      err.classList.add('show');
+      // Let the browser surface which one
+      return;
+    }
+
+    // Backup save to localStorage in case network/FormSubmit fails
+    try {
+      var data = {};
+      new FormData(form).forEach(function(v,k){
+        if(data[k]){ data[k] = [].concat(data[k], v); } else { data[k] = v; }
+      });
+      data._timestamp = new Date().toISOString();
+      var backups = JSON.parse(localStorage.getItem('bk_feedback_backups')||'[]');
+      backups.push(data);
+      localStorage.setItem('bk_feedback_backups', JSON.stringify(backups.slice(-20)));
+    } catch(_){}
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    err.classList.remove('show');
+    // Native form POST proceeds → FormSubmit → redirects to ?submitted=1
+  });
+})();
+</script>
+</body>
+</html>
