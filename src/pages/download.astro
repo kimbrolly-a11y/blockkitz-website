@@ -6,7 +6,7 @@ import appIcon from '../assets/app-icon-512.png';
 
 const title = 'Download Block Kitz';
 const description =
-  'Download Block Kitz free for Android. Family-safe puzzle game with 1,000+ levels, three modes, zero forced ads, and no data collection.';
+  'Block Kitz v1.0.1 — now in Google Play Closed Testing. Join the Beta on Android. Kid-safe puzzle game with 15,000+ levels across 30 themed chapters. No forced ads. Non-personalized ads only.';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -25,10 +25,10 @@ const description =
         Download
       </p>
       <h1 class="mt-3 text-4xl font-extrabold text-white md:text-5xl">
-        Free. Forever. <span class="text-bb-pink">Offline.</span>
+        Free forever. <br class="hidden sm:block" /> Made by <span class="text-bb-pink">Kimberly</span>.
       </h1>
       <p class="mt-4 text-lg text-bb-text-dim">
-        Block Kitz is free to download and free to play. No sign-up. No tracking. Just blocks.
+        Block Kitz is free to download and free to play — built by one indie developer, not a studio. No sign-up. Non-personalized ads only. No profiles built. Just blocks.
       </p>
     </div>
   </section>
@@ -36,48 +36,48 @@ const description =
   <!-- Primary download paths -->
   <section class="relative mx-auto max-w-4xl px-5 md:px-8">
     <div class="grid gap-5 md:grid-cols-2">
-      <!-- Play Store (pending) -->
-      <article class="relative flex flex-col gap-4 rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:p-8">
+      <!-- Join the Beta (Closed Testing) -->
+      <article class="relative flex flex-col gap-4 rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 md:backdrop-blur-sm md:p-8">
         <div class="flex items-center gap-3">
           <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-bb-success to-bb-info text-xl shadow-lg" aria-hidden="true">▶</span>
-          <h2 class="text-xl font-extrabold text-white">Google Play Store</h2>
-          <span class="ml-auto rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-bb-text-faded">
-            Coming soon
+          <h2 class="text-xl font-extrabold text-white">Google Play — Closed Testing</h2>
+          <span class="ml-auto rounded-full bg-bb-primary/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-bb-primary ring-1 ring-bb-primary/30">
+            Beta live
           </span>
         </div>
         <p class="text-sm text-bb-text-dim">
-          Our Play Store listing is in review. Once it's live, you'll be able to install Block Kitz with a single tap — and get automatic updates from then on. We'll update this page as soon as approval lands.
+          Block Kitz v1.0.1 is in Google Play Closed Testing. Opt in on Google Play, then install the latest v1.0.1 build with one tap — you'll get automatic updates through Play from then on.
         </p>
-        <button
-          type="button"
-          disabled
-          class="mt-auto inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full bg-white/10 px-5 py-3 font-semibold text-bb-text-faded ring-1 ring-white/10"
-          aria-disabled="true"
+        <a
+          href="https://play.google.com/apps/testing/com.blockkitz.game"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bb-btn mt-auto"
         >
-          <span aria-hidden="true">🔒</span>
-          <span>Play Store — pending approval</span>
-        </button>
+          <span aria-hidden="true">🎮</span>
+          <span>Join the Beta</span>
+        </a>
       </article>
 
-      <!-- Direct APK -->
-      <article class="relative flex flex-col gap-4 rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:p-8">
+      <!-- Direct APK (legacy preview) -->
+      <article class="relative flex flex-col gap-4 rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 md:backdrop-blur-sm md:p-8">
         <div class="flex items-center gap-3">
           <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-bb-primary to-bb-primary-dark text-xl shadow-lg" aria-hidden="true">⬇️</span>
-          <h2 class="text-xl font-extrabold text-white">Direct APK download</h2>
-          <span class="ml-auto rounded-full bg-bb-success/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-bb-success ring-1 ring-bb-success/30">
-            Available now
+          <h2 class="text-xl font-extrabold text-white">Legacy APK (preview)</h2>
+          <span class="ml-auto rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-bb-text-faded ring-1 ring-white/10">
+            v0.x preview — outdated
           </span>
         </div>
         <p class="text-sm text-bb-text-dim">
-          Download the latest build directly. Android will ask you to allow "Install from unknown sources" the first time — that's expected for sideloaded apps. ~48 MB. Android 5.0+.
+          ⚠️ This is a <strong class="text-white">v0.x preview build</strong> — it's behind the current v1.0.1 Closed-Testing release. For the latest game, join the Beta on Google Play instead. Provided here only for reference or environments without Google Play. ~48 MB. Android 5.0+.
         </p>
         <a
           href="/BlockKitz-debug.apk"
           download
-          class="bb-btn mt-auto"
+          class="bb-btn bb-btn--ghost mt-auto"
         >
           <span aria-hidden="true">⬇️</span>
-          <span>Download APK (48 MB)</span>
+          <span>Download v0.x APK (48 MB)</span>
         </a>
       </article>
     </div>
@@ -85,7 +85,7 @@ const description =
 
   <!-- Quick facts -->
   <section class="relative mx-auto mt-16 max-w-4xl px-5 md:px-8">
-    <div class="rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:p-8">
+    <div class="rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 md:backdrop-blur-sm md:p-8">
       <h2 class="text-xl font-extrabold text-white">The quick facts</h2>
       <dl class="mt-6 grid gap-4 sm:grid-cols-2">
         {
@@ -93,11 +93,11 @@ const description =
             ['Platform',     'Android 5.0+ (iOS planned)'],
             ['Size',         '~48 MB'],
             ['Orientation',  'Portrait'],
-            ['Age rating',   'Everyone / PEGI 3 / USK 0'],
+            ['Age rating',   'Rated for All Ages (IARC rating pending)'],
             ['Languages',    'English (v1)'],
-            ['Internet',     'Not required for gameplay'],
+            ['Internet',     'Gameplay works offline; ads need a connection'],
             ['Permissions',  'Internet (optional ads only)'],
-            ['Price',        'Free — optional coin packs'],
+            ['Price',        'Free — no purchases in v1.0.1'],
           ].map(([k, v]) => (
             <div class="flex flex-col gap-1 rounded-2xl bg-white/5 p-4 ring-1 ring-white/5">
               <dt class="text-xs font-semibold uppercase tracking-[0.15em] text-bb-text-faded">{k}</dt>

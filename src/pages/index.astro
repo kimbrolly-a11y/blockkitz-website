@@ -4,46 +4,46 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import FeatureCard from '../components/FeatureCard.astro';
 
-import shot1 from '../assets/screenshots/1-levels.png';
-import shot2 from '../assets/screenshots/2-no-ads.png';
-import shot3 from '../assets/screenshots/3-modes.png';
-import shot4 from '../assets/screenshots/4-family.png';
-import shot5 from '../assets/screenshots/5-rewards.png';
+import shot1 from '../assets/screenshots/1-modes.png';
+import shot2 from '../assets/screenshots/2-levels.png';
+import shot3 from '../assets/screenshots/3-achievements.png';
+import shot4 from '../assets/screenshots/4-adventure.png';
+import shot5 from '../assets/screenshots/5-daily.png';
 
 const title = 'Block Kitz — The cozy block puzzle for everyone';
 const description =
-  'Block Kitz is a family-safe block-puzzle game for Android. 1,000+ levels, three game modes, zero data collected, zero forced ads. Free to play, fully offline.';
+  'Block Kitz v1.0.1 — a kid-safe block-puzzle game for Android. 15,000+ levels across 30 themed chapters, three game modes, infinite daily challenges. Non-personalized ads only. No profiles built. Free to play, made by indie developer Kimberly.';
 
 const features = [
   {
     icon: '🧩',
-    title: 'Three distinct modes',
+    title: 'Three game modes',
     description:
-      'Classic drag-and-drop, Pivot (modern Tetris-style), and Adventure with gem objectives — all in one game.',
+      'Classic drag-and-drop, Pivot Blocks (modern falling-block puzzler), and Adventure with gem objectives — all in one game.',
     accent: 'primary' as const,
   },
   {
     icon: '⭐',
-    title: '1,000+ levels',
+    title: '15,000+ levels',
     description:
-      'Ten themed chapters per mode, from "Hidden Glade" to "Soul\u2019s Nexus". Hand-crafted and beautiful.',
+      '30 themed chapters across three modes — from "Rookie Grounds" to the "Empyrean Throne." Hand-crafted, procedurally rich, beautifully cozy.',
     accent: 'grape' as const,
   },
   {
     icon: '🛡️',
-    title: 'Family-safe by design',
+    title: 'Kid-safe by design',
     description:
-      'COPPA + GDPR-K aligned. No data collection. No forced ads. Parental gate on every purchase.',
+      'Non-personalized ads only. No profiles built. No tracking. COPPA + GDPR-K aligned. Current launch build is free with no purchases.',
     accent: 'success' as const,
   },
 ];
 
 const heroShots = [
-  { src: shot3, alt: 'Three game modes in Block Kitz' },
-  { src: shot1, alt: 'Over one thousand levels' },
-  { src: shot4, alt: 'Family-friendly design' },
-  { src: shot5, alt: 'Daily rewards and spin wheel' },
-  { src: shot2, alt: 'No forced ads' },
+  { src: shot1, alt: 'Three game modes in Block Kitz' },
+  { src: shot2, alt: 'Chapter-based progression across 30 themed chapters' },
+  { src: shot3, alt: '22 hidden achievements' },
+  { src: shot4, alt: 'Adventure mode — gems, bombs, frozen cells' },
+  { src: shot5, alt: 'Daily login, tasks & challenges' },
 ];
 ---
 
@@ -72,7 +72,7 @@ const heroShots = [
         A little <span class="text-bb-pink">peek</span> inside
       </h2>
       <p class="mt-3 text-bb-text-dim">
-        Bright, bouncy, and built to delight.
+        Real gameplay from Block Kitz v1.0.1.
       </p>
     </div>
 
@@ -109,38 +109,66 @@ const heroShots = [
 
   <!-- Numbers strip -->
   <section class="relative mx-auto mt-20 max-w-6xl px-5 md:px-8">
-    <div class="grid grid-cols-2 gap-4 rounded-[32px] bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-sm md:grid-cols-4 md:p-10">
+    <div class="grid grid-cols-2 gap-4 rounded-[32px] bg-white/5 p-6 ring-1 ring-white/10 md:backdrop-blur-sm md:grid-cols-4 md:p-10">
       <div class="text-center">
-        <p class="font-display text-4xl font-extrabold text-bb-primary md:text-5xl">1,000+</p>
+        <p class="font-display text-4xl font-extrabold text-bb-primary md:text-5xl">15,000+</p>
         <p class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-bb-text-faded">Levels</p>
       </div>
       <div class="text-center">
-        <p class="font-display text-4xl font-extrabold text-bb-pink md:text-5xl">3</p>
+        <p class="font-display text-4xl font-extrabold text-bb-pink md:text-5xl">30</p>
+        <p class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-bb-text-faded">Themed chapters</p>
+      </div>
+      <div class="text-center">
+        <p class="font-display text-4xl font-extrabold text-bb-grape md:text-5xl">3</p>
         <p class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-bb-text-faded">Game modes</p>
       </div>
       <div class="text-center">
-        <p class="font-display text-4xl font-extrabold text-bb-success md:text-5xl">0</p>
-        <p class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-bb-text-faded">Data collected</p>
+        <p class="font-display text-4xl font-extrabold text-bb-info md:text-5xl">22</p>
+        <p class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-bb-text-faded">Achievements</p>
       </div>
-      <div class="text-center">
-        <p class="font-display text-4xl font-extrabold text-bb-info md:text-5xl">100%</p>
-        <p class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-bb-text-faded">Offline</p>
+    </div>
+  </section>
+
+  <!-- Made by one indie dev -->
+  <section class="relative mx-auto mt-20 max-w-3xl px-5 md:px-8">
+    <div class="rounded-[32px] bg-gradient-to-br from-bb-grape/20 via-bb-info/15 to-bb-pink/20 p-8 text-center ring-1 ring-white/10 md:p-12">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">Made by one indie dev</p>
+      <h2 class="mt-4 text-3xl font-extrabold text-white md:text-4xl">
+        Built by <span class="text-bb-pink">Kimberly</span>. <br class="hidden sm:block" />
+        Powered by <span class="text-bb-primary">you</span>.
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-bb-text-dim">
+        There's no big studio behind Block Kitz — just one indie developer making the kind of game she'd want her own family to play. If you enjoy it, a one-time tip goes directly to funding <strong class="text-white">the next Kimberly-made game</strong>.
+      </p>
+      <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+        <a href="/about" class="bb-btn">
+          <span aria-hidden="true">💛</span>
+          <span>Meet Kimberly</span>
+        </a>
+        <a href="/support-the-dev" class="bb-btn bb-btn--ghost">
+          Send a tip
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Final CTA -->
-  <section class="relative mx-auto mt-20 max-w-3xl px-5 text-center md:px-8">
+  <section class="relative mx-auto mt-16 max-w-3xl px-5 text-center md:px-8">
     <h2 class="text-3xl font-extrabold text-white md:text-4xl">
       Ready to <span class="text-bb-primary">play</span>?
     </h2>
     <p class="mt-3 text-bb-text-dim">
-      Free. Offline. No sign-up. No tracking. Just blocks.
+      Currently in Google Play Closed Testing. Free to play. No sign-up required.
     </p>
     <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-      <a href="/download" class="bb-btn">
-        <span aria-hidden="true">⬇️</span>
-        <span>Download Block Kitz</span>
+      <a
+        href="https://play.google.com/apps/testing/com.blockkitz.game"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bb-btn"
+      >
+        <span aria-hidden="true">🎮</span>
+        <span>Join the Beta</span>
       </a>
       <a href="/safety" class="bb-btn bb-btn--ghost">
         For parents

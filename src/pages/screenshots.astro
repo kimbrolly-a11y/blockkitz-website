@@ -3,22 +3,22 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlockDecoration from '../components/BlockDecoration.astro';
 
-import shot1 from '../assets/screenshots/1-levels.png';
-import shot2 from '../assets/screenshots/2-no-ads.png';
-import shot3 from '../assets/screenshots/3-modes.png';
-import shot4 from '../assets/screenshots/4-family.png';
-import shot5 from '../assets/screenshots/5-rewards.png';
+import shot1 from '../assets/screenshots/1-modes.png';
+import shot2 from '../assets/screenshots/2-levels.png';
+import shot3 from '../assets/screenshots/3-achievements.png';
+import shot4 from '../assets/screenshots/4-adventure.png';
+import shot5 from '../assets/screenshots/5-daily.png';
 
 const title = 'Screenshots — Block Kitz';
 const description =
-  'See Block Kitz in action — 1,000+ levels, three modes, family-friendly design, daily rewards, and zero forced ads.';
+  'See Block Kitz v1.0.1 in action — three game modes, 30 themed chapters, 22 achievements, and a daily system designed for family-safe play.';
 
 const shots = [
-  { src: shot1, alt: '1,000+ hand-crafted levels across 10 chapters', caption: '1,000+ levels' },
-  { src: shot3, alt: 'Three distinct game modes — Classic, Pivot, and Adventure', caption: 'Three game modes' },
-  { src: shot4, alt: 'Family-friendly design with cheerful hamster mascot', caption: 'Family-friendly' },
-  { src: shot5, alt: 'Daily rewards, spin wheel, and power-ups', caption: 'Daily rewards & bonuses' },
-  { src: shot2, alt: 'Zero forced ads — rewarded video only when you tap', caption: 'No forced ads' },
+  { src: shot1, alt: 'Block Kitz main menu — choose from Classic, Pivot Blocks, or Adventure', caption: 'Three game modes' },
+  { src: shot2, alt: 'Classic Journey chapter progression — Rookie Grounds Chapter 1', caption: 'Chapter-based progression' },
+  { src: shot3, alt: 'Achievement milestones screen in Block Kitz', caption: '22 hidden achievements' },
+  { src: shot4, alt: 'Adventure mode gameplay — collect gems and dodge bombs', caption: 'Adventure: gems, bombs, frozen cells' },
+  { src: shot5, alt: 'Daily system in Block Kitz — login streak, tasks, and challenges', caption: 'Daily login, tasks & challenges' },
 ];
 ---
 
@@ -31,7 +31,7 @@ const shots = [
         A little <span class="text-bb-pink">peek</span> inside.
       </h1>
       <p class="mt-4 text-lg text-bb-text-dim">
-        Bright, bouncy, and built to delight on any Android phone.
+        Real gameplay from Block Kitz v1.0.1 — currently in Google Play Closed Testing.
       </p>
     </div>
   </section>
@@ -64,9 +64,14 @@ const shots = [
       Ready to <span class="text-bb-primary">play</span>?
     </h2>
     <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-      <a href="/download" class="bb-btn">
+      <a
+        href="https://play.google.com/apps/testing/com.blockkitz.game"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bb-btn"
+      >
         <span aria-hidden="true">🎮</span>
-        <span>Download Block Kitz</span>
+        <span>Join the Beta</span>
       </a>
       <a href="/features" class="bb-btn bb-btn--ghost">Full feature list</a>
     </div>

@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/LegalLayout.astro
 title: Children's Safety & Parental Info
-description: How Block Kitz protects children. COPPA, GDPR-K, UK AADC, and Google Play Families Policy compliant. No data collection, no forced ads, parental gate on purchases.
+description: How Block Kitz protects children. COPPA, GDPR-K, UK AADC, and Google Play Families Policy compliant. Non-personalized ads only, no forced ads, no in-app purchases in v1.0.1.
 lastUpdated: April 2026
 ---
 
@@ -15,13 +15,13 @@ lastUpdated: April 2026
 
 We designed Block Kitz to be the block puzzle we'd be happy for our own children to play. That means:
 
-- ❌ **No data collection.** Nothing about your child ever leaves the device.
+- ✅ **Minimal data.** Only the device's advertising ID, and only when your child taps "Watch Ad" — used to show a non-personalized ad. No profiles. No behavioural tracking. No data sharing.
 - ❌ **No forced ads.** No banner ads, no interstitials, no "you must watch this to continue."
 - ❌ **No chat, no multiplayer, no social features.** No strangers can reach your child through Block Kitz.
 - ❌ **No gambling mechanics.** The spin wheel awards only free in-game coins — never real money, never mystery loot boxes.
 - ❌ **No age-inappropriate ads.** Our ads are rated G and have child-directed treatment enabled.
-- ✅ **Parental gate** on every in-app purchase.
-- ✅ **Fully offline.** The game works without an internet connection.
+- ✅ **No in-app purchases in v1.0.1.** The current launch build has no IAP at all.
+- ✅ **Offline gameplay.** Gameplay works offline — only optional rewarded video ads need a connection.
 
 ## 1. Compliance
 
@@ -35,7 +35,9 @@ Block Kitz complies with the major children's privacy laws and policies:
 
 ## 2. Data — what we collect
 
-**Nothing.** We do not collect any personal data from any player, child or adult. Your child's game progress is stored locally on their device and never sent to our servers (we don't have any servers that collect game data). See the full [Privacy Policy](/privacy) for the complete breakdown.
+**Almost nothing — and never personal data.** We do not collect names, emails, locations, contacts, photos, or any other personal information from any player, child or adult. Your child's game progress is stored locally on their device and never sent to our servers (we don't have any servers that collect game data).
+
+The **only** data touched is your device's advertising ID, passed to Google AdMob **only** when a player deliberately taps "Watch Ad." It's used to serve a **non-personalized** ad — no profiling, no behavioural tracking, no data sharing. See the full [Privacy Policy](/privacy) for the complete breakdown.
 
 ## 3. Ads — how they work
 
@@ -47,15 +49,13 @@ Block Kitz includes **optional rewarded ads** via Google AdMob. That means:
 - Ads are **child-directed treatment enabled** — COPPA and GDPR-K protections applied to every ad request.
 - Maximum content rating is **G** — no gambling, alcohol, dating, or adult-themed ads.
 
-## 4. Purchases — parental gate
+## 4. Purchases — not in v1.0.1
 
-Block Kitz offers optional in-app purchases (coin packs, a supporter pack). To protect kids from accidental or unauthorized spending, we add an **in-app parental gate** before any purchase flow:
+**The current launch build (v1.0.1) has no in-app purchases at all.** It's fully free to play, with no coin packs, no supporter packs, and no paywalls.
 
-- A simple math problem (e.g., "What is 7 + 8?") must be answered before the purchase screen opens.
-- The gate is designed to be passable by an adult in a second or two, but block an impulsive tap from a young child.
-- The actual payment is still processed by Google Play Billing, which has its own authentication layer.
+We plan to add **optional cosmetic coin packs** in a later update. When we do, they will be gated by an **in-app parental math gate** (e.g., "What is 7 + 8?") before the purchase screen opens — designed to be passable by an adult in a second or two, but block an impulsive tap from a young child. The actual payment will still be processed by Google Play Billing, which has its own authentication layer.
 
-**We strongly recommend** enabling these device-level protections as well:
+**We strongly recommend** enabling these device-level protections now, so they're in place before any future update:
 
 ### Android
 1. Open **Google Play Store** → tap your profile picture → **Settings**.
@@ -87,7 +87,7 @@ Block Kitz carries the following age ratings:
 - **ESRB:** Everyone
 - **USK:** 0
 
-The visual style is deliberately bright, friendly, and non-violent — no weapons, no combat, no scary imagery. The mascot is a cheerful hamster who reacts to successful plays.
+The visual style is deliberately bright, friendly, and non-violent — no weapons, no combat, no scary imagery.
 
 ## 7. Reporting a concern
 

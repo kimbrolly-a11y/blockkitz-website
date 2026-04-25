@@ -1,0 +1,132 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlockDecoration from '../components/BlockDecoration.astro';
+import appIcon from '../assets/app-icon-512.png';
+
+const title = 'Support the developer — Block Kitz';
+const description =
+  'Block Kitz is free forever. If you enjoyed it, a tip helps indie developer Kimberly build the next family-safe game. One-time tip via Stripe — you choose the amount.';
+
+const STRIPE_TIP_URL = 'https://buy.stripe.com/14AeV6349b4Pa4UfzF7EQ00';
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Hero -->
+  <section class="bb-stars relative overflow-hidden pt-10 pb-10 md:pt-16 md:pb-14">
+    <BlockDecoration />
+    <div class="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">Support the developer</p>
+      <h1 class="mt-4 text-4xl font-extrabold text-white md:text-5xl">
+        Help me make <span class="text-bb-pink">more games</span>.
+      </h1>
+      <p class="mx-auto mt-4 max-w-xl text-lg text-bb-text-dim">
+        Block Kitz is and always will be free to play. If it brought you or your kids joy, a one-time tip helps fund the next family-safe game.
+      </p>
+    </div>
+  </section>
+
+  <!-- Donation card -->
+  <section class="relative mx-auto max-w-3xl px-5 md:px-8">
+    <div class="rounded-[32px] bg-gradient-to-br from-bb-grape/25 via-bb-info/20 to-bb-pink/25 p-8 ring-1 ring-white/10 md:p-12">
+      <div class="flex flex-col items-center gap-6 text-center">
+        <Image
+          src={appIcon}
+          alt="Block Kitz app icon"
+          width={96}
+          height={96}
+          class="h-20 w-20 rounded-3xl shadow-xl ring-1 ring-white/10"
+        />
+
+        <div>
+          <p class="font-display text-2xl font-extrabold text-white md:text-3xl">
+            Send a one-time tip
+          </p>
+          <p class="mt-2 text-bb-text-dim">
+            You pick the amount on the next page.
+          </p>
+        </div>
+
+        <a
+          href={STRIPE_TIP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bb-btn text-base md:text-lg"
+        >
+          <span aria-hidden="true">💛</span>
+          <span>Send a tip</span>
+          <span aria-hidden="true" class="ml-1">→</span>
+        </a>
+
+        <p class="text-xs text-bb-text-faded">
+          Opens Stripe's secure checkout. You can pay with card, Apple Pay, or Google Pay. No Stripe account required.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust row -->
+  <section class="relative mx-auto mt-10 max-w-3xl px-5 md:px-8">
+    <ul class="grid gap-4 sm:grid-cols-3">
+      {
+        [
+          ['💯', '100% to Kimberly', 'We take no platform fee. Only Stripe\u2019s standard card-processing fee applies.'],
+          ['🔒', 'No data on our site', 'blockkitz.com collects nothing. Payment happens entirely on Stripe\u2019s secure servers.'],
+          ['🎮', 'Tips, not paywalls', 'Every level in the game is free. Tips are optional and purely to support development.'],
+        ].map(([icon, head, body]) => (
+          <li class="rounded-2xl bg-white/5 p-5 text-center ring-1 ring-white/10">
+            <span class="text-3xl" aria-hidden="true">{icon}</span>
+            <p class="mt-3 font-bold text-white">{head}</p>
+            <p class="mt-1 text-sm text-bb-text-dim">{body}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- Message from Kimberly -->
+  <section class="relative mx-auto mt-12 max-w-2xl px-5 md:px-8">
+    <figure class="rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 md:p-8">
+      <blockquote class="text-bb-text-dim italic">
+        "Every tip, no matter how small, goes directly into making more cozy, family-safe games. Thank you for being part of the journey — it means everything."
+      </blockquote>
+      <figcaption class="mt-4 text-right text-sm font-semibold text-bb-primary">
+        — Kimberly, solo indie developer
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Other ways to help -->
+  <section class="relative mx-auto mt-16 max-w-3xl px-5 text-center md:px-8">
+    <h2 class="text-2xl font-extrabold text-white md:text-3xl">
+      Can't tip? Here are <span class="text-bb-success">other ways</span> to help.
+    </h2>
+    <ul class="mx-auto mt-6 grid max-w-xl gap-3 text-left text-bb-text-dim">
+      <li class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+        ⭐ <strong class="text-white">Leave a review</strong> on the Play Store once the listing is live — reviews are everything for an indie dev.
+      </li>
+      <li class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+        📢 <strong class="text-white">Tell a friend</strong> who has kids — word of mouth beats any ad budget.
+      </li>
+      <li class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+        💡 <strong class="text-white">Send feedback</strong> to <a href="mailto:support@blockkitz.com" class="font-semibold text-bb-primary hover:underline">support@blockkitz.com</a> — bug reports and ideas make the next update better.
+      </li>
+      <li class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+        🎮 <strong class="text-white">Join the Closed Beta</strong> on Google Play to help playtest the v1.0.1 build — every crash report and bit of feedback makes the game better. <a href="https://play.google.com/apps/testing/com.blockkitz.game" target="_blank" rel="noopener noreferrer" class="font-semibold text-bb-primary hover:underline">Opt in here →</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Back CTA -->
+  <section class="relative mx-auto mt-14 max-w-2xl px-5 text-center md:px-8">
+    <div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+      <a href="/download" class="bb-btn">
+        <span aria-hidden="true">🎮</span>
+        <span>Get Block Kitz free</span>
+      </a>
+      <a href="/about" class="bb-btn bb-btn--ghost">
+        Meet Kimberly
+      </a>
+    </div>
+  </section>
+</BaseLayout>

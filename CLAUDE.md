@@ -124,13 +124,15 @@ For Play Console to approve the app, this website MUST have:
 
 - **Genre:** Block puzzle / casual puzzle
 - **Platform:** Android (iOS in future)
-- **Age rating:** Everyone / 3+
-- **Modes:** Classic (8×8 drag & drop), Pivot (Tetris-style), Adventure (gems + bombs)
-- **Levels:** 1,000+ across 10 chapters per mode
-- **Monetization:** Optional rewarded video ads (AdMob) + optional in-app coin purchases. Fully playable free with zero ads forced.
-- **Offline play:** Yes, no internet needed
-- **Family-safe:** COPPA-compliant, GDPR-K compliant, UK AADC aligned, Google Play Families Policy aligned. No data collection.
+- **Age rating:** Rated for All Ages (IARC rating pending — do not claim PEGI/USK/ESRB specifics until IARC lands)
+- **Modes:** Classic (8×8 drag & drop), Pivot Blocks (modern falling-block puzzler — SRS, 7-bag), Adventure (gems + bombs + frozen cells + locked treasures)
+- **Levels:** **15,000+ total across 30 themed chapters** (5,000 per mode × 3 modes; 10 chapters per mode). Marketing copy must say "15,000+ levels across 30 themed chapters. Three game modes. Infinite daily challenges." per the v1.0.1 compliance spec confirmed by Kimberly.
+- **Monetization (v1.0.1 build):** Optional rewarded video ads (AdMob). **No in-app purchases in the launch build.** Optional cosmetic coin packs with a parental math gate are planned for a later update.
+- **Offline play:** Gameplay works offline. Only optional rewarded video ads need a connection. **Do NOT claim "100% offline" or "completely offline"** — it's inaccurate and policy-risky.
+- **Family-safe:** COPPA-compliant, GDPR-K compliant, UK AADC aligned, Google Play Families Policy aligned. **Data posture:** advertising ID only, used solely to serve non-personalized ads when the player taps "Watch Ad." No profiles. No behavioural tracking. No data sharing. **Do NOT claim "zero data collection"** — it contradicts the Data Safety form.
 - **Ads:** Non-personalized only. `tagForChildDirectedTreatment=true`, `maxAdContentRating=G`.
+- **Beta status:** v1.0.1 is live in Google Play Closed Testing. Opt-in URL: `https://play.google.com/apps/testing/com.blockkitz.game`. CTA sitewide is "Join the Beta", not "Download Free".
+- **Beta feedback URL:** `https://blockblitz-eight.vercel.app/feedback.html` (linked from footer).
 - **Languages:** English only (v1). More planned.
 
 ## Working conventions
@@ -204,4 +206,4 @@ blockkitz-website/
 
 ---
 
-*Last updated: 2026-04-22 (initial handoff from game repo)*
+*Last updated: 2026-04-25 (v1.0.1 compliance rewrite — 15,000+ levels, Closed Testing, advertising-ID-only data posture)*
