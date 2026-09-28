@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlockDecoration from '../../components/BlockDecoration.astro';
+
+const title = 'Case Study: Infinity Tech — Block Kitz';
+const description =
+  'How Hungry Humans designed, built, and shipped Block Kitz — a family-safe mobile puzzle game — end-to-end for Infinity Tech LLP. 15,000+ levels, three modes, full Play Families Policy compliance.';
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Hero -->
+  <section class="bb-stars relative overflow-hidden pt-10 pb-12 md:pt-16 md:pb-16">
+    <BlockDecoration />
+    <div class="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">Customer Story</p>
+      <h1 class="mt-4 text-4xl font-extrabold text-white md:text-5xl">
+        Infinity Tech × <span class="text-bb-pink">Block Kitz</span>
+      </h1>
+      <p class="mt-4 text-lg text-bb-text-dim">
+        Shipping a compliant, family-safe puzzle game end-to-end with a Claude Code-native studio.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fact card -->
+  <section class="relative mx-auto max-w-3xl px-5 md:px-8">
+    <div class="rounded-[32px] bg-white/5 p-6 ring-1 ring-white/10 md:backdrop-blur-sm md:p-8">
+      <dl class="grid gap-4 text-sm sm:grid-cols-2">
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-[0.15em] text-bb-text-faded">Client</dt>
+          <dd class="mt-1 font-display text-lg font-extrabold text-white">Infinity Tech LLP</dd>
+          <dd class="text-bb-text-dim">Singapore · UEN T26LL0996E</dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-[0.15em] text-bb-text-faded">Studio</dt>
+          <dd class="mt-1 font-display text-lg font-extrabold text-white">Hungry Humans</dd>
+          <dd class="text-bb-text-dim">Design, code, audio, everything.</dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-[0.15em] text-bb-text-faded">Product</dt>
+          <dd class="mt-1 font-display text-lg font-extrabold text-white">Block Kitz</dd>
+          <dd class="text-bb-text-dim">Android puzzle game · iOS on roadmap</dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-[0.15em] text-bb-text-faded">Status</dt>
+          <dd class="mt-1 font-display text-lg font-extrabold text-white">10,000+ downloads</dd>
+          <dd class="text-bb-text-dim">v1.0.1 · Google Play Closed Testing</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- The brief -->
+  <section class="relative mx-auto mt-14 max-w-3xl px-5 md:px-8">
+    <h2 class="text-3xl font-extrabold text-white md:text-4xl">
+      The <span class="text-bb-primary">brief</span>
+    </h2>
+    <p class="mt-4 text-bb-text-dim">
+      Infinity Tech LLP commissioned <strong class="text-white">Hungry Humans</strong> to design, build, and launch a family-safe mobile puzzle game that could stand up to the strictest regulatory bars in the market — Google Play's Families Policy, COPPA, GDPR-K, and the UK Age Appropriate Design Code — while still feeling as playful and polished as the top-charting titles. The mandate: <strong class="text-white">no compromises on compliance, no compromises on craft.</strong>
+    </p>
+  </section>
+
+  <!-- What we shipped -->
+  <section class="relative mx-auto mt-14 max-w-4xl px-5 md:px-8">
+    <h2 class="text-3xl font-extrabold text-white md:text-4xl">
+      What we <span class="text-bb-primary">shipped</span>
+    </h2>
+    <p class="mt-4 max-w-3xl text-bb-text-dim">
+      A three-mode block puzzler with <strong class="text-white">15,000+ hand-crafted levels across 30 themed chapters</strong> and infinite daily challenges.
+    </p>
+    <ul class="mt-6 grid gap-4 md:grid-cols-3">
+      {
+        [
+          ['🧩', 'Classic', '8×8 drag-and-drop block placement. Chapter-based progression from "Rookie Grounds" through ten themed environments.'],
+          ['🎯', 'Pivot Blocks', 'Modern falling-block puzzler — SRS rotation, 7-bag randomiser, T-Spin bonuses, hold piece, guideline scoring.'],
+          ['💎', 'Adventure', 'Gems, bombs, frozen cells, locked treasures across ten mystical chapters. Each chapter has its own rules and visual world.'],
+        ].map(([icon, head, body]) => (
+          <li class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <span class="text-3xl" aria-hidden="true">{icon}</span>
+            <p class="mt-3 font-bold text-white">{head}</p>
+            <p class="mt-1 text-sm text-bb-text-dim">{body}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mt-6 max-w-3xl text-bb-text-dim">
+      Wrapped in a proprietary "Jelly Pop" design system — Fredoka + Baloo 2 typography, high-contrast navy/gold palette, mobile-first UI, ambient piano soundtrack, thirty distinct chapter environments.
+    </p>
+  </section>
+
+  <!-- The compliance work -->
+  <section class="relative mx-auto mt-14 max-w-4xl px-5 md:px-8">
+    <h2 class="text-3xl font-extrabold text-white md:text-4xl">
+      Family-safe by <span class="text-bb-primary">architecture</span>
+    </h2>
+    <p class="mt-4 max-w-3xl text-bb-text-dim">Not by afterthought. Every technical choice was made against the strictest bar for kid-targeted apps.</p>
+    <ul class="mt-6 grid gap-4 md:grid-cols-2">
+      {
+        [
+          ['🛡️', 'Advertising ID only', 'No personal data collected. No profiles built. No behavioural tracking. No data sharing.'],
+          ['🎯', 'Non-personalized ads only', '`tagForChildDirectedTreatment=true` · `tagForUnderAgeOfConsent=true` · `maxAdContentRating=G`.'],
+          ['🚫', 'No forced ads', 'Every ad is player-initiated ("Watch Ad for Revive," "Watch Ad for x2 Coins").'],
+          ['💰', 'No purchases in the launch build', 'Optional cosmetic packs planned with a parental math gate before checkout.'],
+          ['📴', 'Offline gameplay', 'Connection needed only for the optional rewarded ad. The game itself plays fully offline.'],
+          ['🌐', 'Tracker-free marketing site', 'blockkitz.com — no analytics, no third-party scripts, Lighthouse ≥ 95.'],
+        ].map(([icon, head, body]) => (
+          <li class="flex gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <span class="text-2xl" aria-hidden="true">{icon}</span>
+            <div>
+              <p class="font-bold text-white">{head}</p>
+              <p class="mt-1 text-sm text-bb-text-dim" set:html={body} />
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- How we built it -->
+  <section class="relative mx-auto mt-14 max-w-3xl px-5 md:px-8">
+    <h2 class="text-3xl font-extrabold text-white md:text-4xl">
+      How we <span class="text-bb-primary">built it</span>
+    </h2>
+    <p class="mt-4 text-bb-text-dim">
+      Hungry Humans is a <strong class="text-white">Claude Code-native studio</strong>. Every layer of Block Kitz — game logic, UI/UX, mobile packaging, monetization, Play Store compliance, marketing site, ongoing live operations — was designed and delivered inside a Claude Code development environment. That end-to-end methodology is what let a small team ship a full-lifecycle commercial mobile product, from procedural level generation to Android release signing to blockkitz.com to Google Ads campaigns, at the velocity Infinity Tech needed.
+    </p>
+    <div class="mt-6 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-bb-text-faded">Stack</p>
+      <p class="mt-2 text-bb-text-dim">
+        Vanilla HTML / CSS / JavaScript (game core) · Capacitor 6 (Android wrapper) · Astro + Tailwind (marketing site) · Vercel · Cloudflare DNS · Google AdMob (families-safe configuration) · Google Play Billing (deferred) · ElevenLabs (audio pipeline)
+      </p>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="relative mx-auto mt-14 max-w-4xl px-5 md:px-8">
+    <h2 class="text-3xl font-extrabold text-white md:text-4xl">
+      <span class="text-bb-primary">Outcomes</span>
+    </h2>
+    <ul class="mt-6 grid gap-4 md:grid-cols-2">
+      {
+        [
+          ['📥', '10,000+ downloads', 'On Google Play, and climbing.'],
+          ['🔁', '18+ iteration cycles', 'From live player feedback, shipped as sequential production releases.'],
+          ['🚀', 'v1.0.1 in Closed Testing', 'Live on Google Play, opt-in beta open to the public.'],
+          ['✅', 'Verification passed', 'Play Console developer verification + Google Play Families Policy self-certification.'],
+        ].map(([icon, head, body]) => (
+          <li class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+            <div class="flex items-baseline gap-3">
+              <span class="text-2xl" aria-hidden="true">{icon}</span>
+              <p class="font-display text-xl font-extrabold text-white">{head}</p>
+            </div>
+            <p class="mt-1 text-sm text-bb-text-dim">{body}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative mx-auto mt-16 max-w-3xl px-5 text-center md:px-8">
+    <div class="rounded-[32px] bg-gradient-to-br from-bb-grape/20 via-bb-info/15 to-bb-pink/20 p-8 ring-1 ring-white/10 md:p-12">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">
+        See it for <span class="text-bb-primary">yourself</span>
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-bb-text-dim">
+        Block Kitz is free to play. The v1.0.1 build is live on Google Play in Closed Testing — opt in from the beta page to try it.
+      </p>
+      <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+        <a href="/beta" class="bb-btn">
+          <span aria-hidden="true">🎮</span>
+          <span>Join the Beta</span>
+        </a>
+        <a href="/about" class="bb-btn bb-btn--ghost">
+          Meet the studio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credit -->
+  <section class="relative mx-auto mt-14 max-w-3xl px-5 text-center md:px-8">
+    <p class="text-sm text-bb-text-faded">
+      Published by <strong class="text-white">Infinity Tech LLP</strong>. Developed by <strong class="text-white">Hungry Humans</strong>.
+    </p>
+  </section>
+</BaseLayout>
