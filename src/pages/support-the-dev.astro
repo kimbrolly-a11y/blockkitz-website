@@ -4,9 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlockDecoration from '../components/BlockDecoration.astro';
 import appIcon from '../assets/app-icon-512.png';
 
-const title = 'Support the developer — Block Kitz';
+const title = 'Support the studio — Block Kitz';
 const description =
-  'Block Kitz is free forever. If you enjoyed it, a tip helps indie developer Kimberly build the next family-safe game. One-time tip via Stripe — you choose the amount.';
+  'Block Kitz is free forever. If you enjoyed it, a tip helps Hungry Humans build the next family-safe game. One-time tip via Stripe — you choose the amount.';
 
 const STRIPE_TIP_URL = 'https://buy.stripe.com/14AeV6349b4Pa4UfzF7EQ00';
 ---
@@ -16,12 +16,12 @@ const STRIPE_TIP_URL = 'https://buy.stripe.com/14AeV6349b4Pa4UfzF7EQ00';
   <section class="bb-stars relative overflow-hidden pt-10 pb-10 md:pt-16 md:pb-14">
     <BlockDecoration />
     <div class="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-8">
-      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">Support the developer</p>
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-bb-primary">Support the studio</p>
       <h1 class="mt-4 text-4xl font-extrabold text-white md:text-5xl">
-        Help me make <span class="text-bb-pink">more games</span>.
+        Help the studio make <span class="text-bb-pink">more games</span>.
       </h1>
       <p class="mx-auto mt-4 max-w-xl text-lg text-bb-text-dim">
-        Block Kitz is and always will be free to play. If it brought you or your kids joy, a one-time tip helps fund the next family-safe game.
+        Block Kitz is and always will be free to play. If it brought you or your kids joy, a one-time tip helps Hungry Humans fund the next family-safe title.
       </p>
     </div>
   </section>
@@ -70,7 +70,7 @@ const STRIPE_TIP_URL = 'https://buy.stripe.com/14AeV6349b4Pa4UfzF7EQ00';
     <ul class="grid gap-4 sm:grid-cols-3">
       {
         [
-          ['💯', '100% to Kimberly', 'We take no platform fee. Only Stripe\u2019s standard card-processing fee applies.'],
+          ['💯', '100% to the studio', 'We take no platform fee. Only Stripe\u2019s standard card-processing fee applies.'],
           ['🔒', 'No data on our site', 'blockkitz.com collects nothing. Payment happens entirely on Stripe\u2019s secure servers.'],
           ['🎮', 'Tips, not paywalls', 'Every level in the game is free. Tips are optional and purely to support development.'],
         ].map(([icon, head, body]) => (
@@ -84,14 +84,14 @@ const STRIPE_TIP_URL = 'https://buy.stripe.com/14AeV6349b4Pa4UfzF7EQ00';
     </ul>
   </section>
 
-  <!-- Message from Kimberly -->
+  <!-- Message from the studio -->
   <section class="relative mx-auto mt-12 max-w-2xl px-5 md:px-8">
     <figure class="rounded-[28px] bg-white/5 p-6 ring-1 ring-white/10 md:p-8">
       <blockquote class="text-bb-text-dim italic">
         "Every tip, no matter how small, goes directly into making more cozy, family-safe games. Thank you for being part of the journey — it means everything."
       </blockquote>
       <figcaption class="mt-4 text-right text-sm font-semibold text-bb-primary">
-        — Kimberly, solo indie developer
+        — The Hungry Humans team
       </figcaption>
     </figure>
   </section>
@@ -103,7 +103,7 @@ const STRIPE_TIP_URL = 'https://buy.stripe.com/14AeV6349b4Pa4UfzF7EQ00';
     </h2>
     <ul class="mx-auto mt-6 grid max-w-xl gap-3 text-left text-bb-text-dim">
       <li class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-        ⭐ <strong class="text-white">Leave a review</strong> on the Play Store once the listing is live — reviews are everything for an indie dev.
+        ⭐ <strong class="text-white">Leave a review</strong> on the Play Store once the listing is live — reviews are everything for a small studio.
       </li>
       <li class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
         📢 <strong class="text-white">Tell a friend</strong> who has kids — word of mouth beats any ad budget.
@@ -125,7 +125,7 @@ const STRIPE_TIP_URL = 'https://buy.stripe.com/14AeV6349b4Pa4UfzF7EQ00';
         <span>Get Block Kitz free</span>
       </a>
       <a href="/about" class="bb-btn bb-btn--ghost">
-        Meet Kimberly
+        Meet the studio
       </a>
     </div>
   </section>
