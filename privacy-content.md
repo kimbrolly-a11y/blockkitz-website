@@ -6,9 +6,10 @@
 
 ## 1. Who We Are
 
-Block Kitz is published by the developer named below. This policy covers the Block Kitz game on the web at blockkitz.com and any mobile app versions.
+Block Kitz is published by Infinity Tech LLP and developed by Hungry Humans. This policy covers the Block Kitz game on the web at blockkitz.com and any mobile app versions.
 
-- **Developer:** Kimberly (independent developer)
+- **Publisher:** Infinity Tech LLP (Singapore UEN T26LL0996E), 3 Lor 6 Geylang, #06-03, Singapore 399165
+- **Developer:** Hungry Humans
 - **Contact email:** [support@blockkitz.com](mailto:support@blockkitz.com)
 
 If you are a parent or guardian and have questions, please email us at the address above.

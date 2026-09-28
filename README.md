@@ -31,7 +31,7 @@ From this `website-handoff` folder, copy:
 
 ### Step 3 — Copy brand assets from the game repo
 
-Copy these files from `C:\Users\kimberly\Documents\Claude Projects\Block Blitz\` to the new website folder:
+Copy these files from the Block Blitz game repo to the new website folder:
 
 ```
 Source (in game repo)                              Destination (in website repo)
@@ -94,7 +94,7 @@ The website is "done" when:
 - [ ] Privacy Policy is at `https://blockkitz.com/privacy`
 - [ ] Terms of Service is at `https://blockkitz.com/terms`
 - [ ] Support email `support@blockkitz.com` is visible on home + support + footer
-- [ ] Developer name (Kimberly) is on `/about`
+- [ ] Studio + publisher (Hungry Humans / Infinity Tech) named on `/about`
 - [ ] Google Play badge on home + download pages
 - [ ] APK download link works (either direct or via Play Store badge)
 - [ ] Mobile responsive (test at 360×800 minimum)
@@ -106,7 +106,7 @@ The website is "done" when:
 
 ## 🔗 Once the website is live
 
-Come back to the game repo (`C:\Users\kimberly\Documents\Claude Projects\Block Blitz\`) and tell me:
+Come back to the game repo and tell me:
 - "Website is live at blockkitz.com"
 
 I'll then:

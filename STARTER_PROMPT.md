@@ -5,7 +5,7 @@
 
 ---
 
-I'm building the marketing website for my mobile game **Block Kitz** at **blockkitz.com**. This is a SEPARATE project from the game itself — the website is purely for marketing, legal compliance, and Google Play Store verification.
+Building the marketing website for the mobile game **Block Kitz** at **blockkitz.com**. Block Kitz is developed by **Hungry Humans** on behalf of **Infinity Tech**. This is a SEPARATE project from the game itself — the website is purely for marketing, legal compliance, and Google Play Store verification.
 
 ## Goal
 
@@ -13,7 +13,7 @@ Build a **static marketing website** using Astro + Tailwind + deployed to Vercel
 
 ## Context — what already exists
 
-I have a mobile game called Block Kitz that's ready for Play Store submission. The game is a kid-friendly block puzzle with 3 modes (Classic, Pivot, Adventure), 1,000+ levels, COPPA-compliant, no data collection, optional rewarded ads via AdMob.
+Block Kitz is a kid-friendly block puzzle ready for Play Store submission — 3 modes (Classic, Pivot, Adventure), 15,000+ levels, COPPA-compliant, advertising-ID-only data posture, optional rewarded ads via AdMob. Developed by Hungry Humans on behalf of Infinity Tech.
 
 **Reference materials I'll provide:**
 - `CLAUDE.md` — project context + hard rules (read this FIRST)
@@ -47,7 +47,7 @@ Configure `astro.config.mjs` with:
 
 Create `src/layouts/BaseLayout.astro` with:
 - Header (logo + nav: Home, Features, Screenshots, Download, Support, Privacy)
-- Footer (legal links + copyright + developer name)
+- Footer (legal links + copyright + studio/publisher credit)
 - `<head>` with Google Fonts (Baloo 2 + Fredoka), meta tags, favicon, Open Graph
 - Brand CSS variables in global stylesheet
 - Mobile-responsive hamburger menu (CSS-only checkbox hack, no JS)
@@ -65,7 +65,7 @@ Match the game's "Jelly Pop" aesthetic:
 - `/features` — detailed breakdown of 3 modes, 1000 levels, family-safe positioning
 - `/screenshots` — gallery grid of 5 screenshots
 - `/download` — Play Store badge (placeholder until approved) + direct APK link
-- `/about` — "Made by Kimberly, a solo indie developer" story
+- `/about` — "Developed by Hungry Humans on behalf of Infinity Tech" story
 - `/support` — FAQ accordion + prominent mailto:support@blockkitz.com
 
 **Legal pages (content I'll paste from the game repo):**
@@ -91,7 +91,7 @@ Before declaring "done", verify:
 - [ ] Privacy policy is publicly accessible at `https://blockkitz.com/privacy`
 - [ ] Terms is publicly accessible at `https://blockkitz.com/terms`
 - [ ] Support email `support@blockkitz.com` is visible on at least 3 pages
-- [ ] Developer name (Kimberly) appears on `/about`
+- [ ] Studio + publisher (Hungry Humans / Infinity Tech LLP) named on `/about`
 - [ ] Zero 404s on any internal link
 - [ ] Lighthouse score ≥ 95 on all pages (Performance, Accessibility, Best Practices, SEO)
 - [ ] Mobile responsive (test at 360×800 minimum)
@@ -144,7 +144,7 @@ Let's go!
 
 ## 📦 What to bring from the game repo (copy these files before starting)
 
-From `C:\Users\kimberly\Documents\Claude Projects\Block Blitz\`:
+From the Block Blitz game repo:
 
 | Source | Destination in website repo |
 |---|---|
@@ -168,6 +168,7 @@ From `C:\Users\kimberly\Documents\Claude Projects\Block Blitz\`:
 - **Domain:** blockkitz.com (registered at Cloudflare Registrar)
 - **Existing working domain:** block-blitz.com (for fallback)
 - **Support email:** support@blockkitz.com (forwarding setup pending)
-- **Developer:** Kimberly (solo indie)
+- **Publisher (legal):** Infinity Tech LLP (Singapore UEN T26LL0996E)
+- **Developer (studio):** Hungry Humans
 - **Package ID:** com.blockkitz.game
 - **Play Store URL (future):** https://play.google.com/store/apps/details?id=com.blockkitz.game

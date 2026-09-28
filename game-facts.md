@@ -1,6 +1,6 @@
 # Block Kitz — Game Facts Sheet
 
-Use these facts verbatim or lightly rephrased in marketing copy. They are accurate as of **2026-04-25** for the **v1.0.1 build** now in Google Play Closed Testing.
+Use these facts verbatim or lightly rephrased in marketing copy. They are accurate as of **2026-09-28** for the **v1.0.1 build** now in Google Play Closed Testing.
 
 ## 🎮 Game Overview
 
@@ -66,10 +66,13 @@ Use these facts verbatim or lightly rephrased in marketing copy. They are accura
 - **Warm, kid-friendly typography** — Baloo 2 for headings, Fredoka for body
 - **30 unique chapter backgrounds** — meadow, ice cave, jungle, sky palace, underwater, volcanic, etc.
 
-## 👤 Developer
+## 👤 Studio & Publisher
 
-- **Name:** Kimberly
-- **Type:** Solo indie developer
+- **Publisher (legal):** Infinity Tech LLP
+  - Singapore UEN: T26LL0996E
+  - Registered address: 3 Lor 6 Geylang, #06-03, Singapore 399165
+- **Developer (studio):** Hungry Humans
+- **Site attribution copy (verbatim):** "Developed by Hungry Humans on behalf of Infinity Tech."
 - **Website:** https://blockkitz.com
 - **Support:** support@blockkitz.com
 - **Play Store Closed Testing opt-in:** https://play.google.com/apps/testing/com.blockkitz.game

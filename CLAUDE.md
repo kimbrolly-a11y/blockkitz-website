@@ -11,7 +11,9 @@ The **public marketing website** for the Block Kitz mobile game.
 
 - **Purpose:** Google Play Store developer verification + player acquisition + legal compliance
 - **Domain:** https://blockkitz.com
-- **Owner:** Kimberly (solo developer)
+- **Publisher (legal):** Infinity Tech
+- **Developer (studio):** Hungry Humans
+- **Attribution rule:** Site copy says "Developed by Hungry Humans on behalf of Infinity Tech." Do NOT reintroduce personal-name / solo-dev framing anywhere.
 - **NOT the game** — the game is a separate Capacitor-wrapped mobile app in a different repo
 
 ## Tech stack
@@ -41,7 +43,7 @@ The **public marketing website** for the Block Kitz mobile game.
 - `/features` — What's in the game (3 modes, 1000 levels, family-friendly, etc.)
 - `/screenshots` — Visual gallery
 - `/download` — Play Store badge + direct APK link
-- `/about` — About the developer (builds trust for Play Console reviewers)
+- `/about` — About the studio (builds trust for Play Console reviewers)
 - `/support` — FAQ + contact form (mailto: link only, no form POST)
 
 ### Legal (REQUIRED by Google Play Store)
@@ -52,7 +54,7 @@ The **public marketing website** for the Block Kitz mobile game.
 
 ### Optional (nice-to-have)
 - `/press` — Press kit (logos, screenshots download)
-- `/blog` — Blog (empty initially, shows "active" developer)
+- `/blog` — Blog (empty initially, shows "active" studio)
 - `/404` — Custom 404 page
 
 ## Google Play Store verification requirements
@@ -62,7 +64,7 @@ For Play Console to approve the app, this website MUST have:
 1. ✅ **Working HTTPS** at a real domain (blockkitz.com)
 2. ✅ **Privacy Policy URL** — publicly accessible, no login required
 3. ✅ **Support contact** — a visible email address (support@blockkitz.com)
-4. ✅ **Developer identification** — real name or company name on /about
+4. ✅ **Developer identification** — Hungry Humans + Infinity Tech named on /about
 5. ✅ **Consistent branding** — matches the in-app branding
 6. ✅ **Active site** — not parked/under-construction. Real content.
 7. ✅ **Mobile-responsive** — Google reviewers test on mobile
@@ -119,6 +121,7 @@ For Play Console to approve the app, this website MUST have:
 - Speaks to parents AND kids.
 - Short sentences. Active voice.
 - Emojis OK in small doses (🎮 🧩 ⭐ 🏆) — match the in-app vibe.
+- **Attribution is always the studio, never a person.** Refer to "Hungry Humans," "the studio," or "the Hungry Humans team." Do NOT use first-person ("I", "me", "my") or name individual team members in site copy.
 
 ## Game facts (use verbatim in copy)
 
@@ -126,7 +129,7 @@ For Play Console to approve the app, this website MUST have:
 - **Platform:** Android (iOS in future)
 - **Age rating:** Rated for All Ages (IARC rating pending — do not claim PEGI/USK/ESRB specifics until IARC lands)
 - **Modes:** Classic (8×8 drag & drop), Pivot Blocks (modern falling-block puzzler — SRS, 7-bag), Adventure (gems + bombs + frozen cells + locked treasures)
-- **Levels:** **15,000+ total across 30 themed chapters** (5,000 per mode × 3 modes; 10 chapters per mode). Marketing copy must say "15,000+ levels across 30 themed chapters. Three game modes. Infinite daily challenges." per the v1.0.1 compliance spec confirmed by Kimberly.
+- **Levels:** **15,000+ total across 30 themed chapters** (5,000 per mode × 3 modes; 10 chapters per mode). Marketing copy must say "15,000+ levels across 30 themed chapters. Three game modes. Infinite daily challenges." per the v1.0.1 compliance spec.
 - **Monetization (v1.0.1 build):** Optional rewarded video ads (AdMob). **No in-app purchases in the launch build.** Optional cosmetic coin packs with a parental math gate are planned for a later update.
 - **Offline play:** Gameplay works offline. Only optional rewarded video ads need a connection. **Do NOT claim "100% offline" or "completely offline"** — it's inaccurate and policy-risky.
 - **Family-safe:** COPPA-compliant, GDPR-K compliant, UK AADC aligned, Google Play Families Policy aligned. **Data posture:** advertising ID only, used solely to serve non-personalized ads when the player taps "Watch Ad." No profiles. No behavioural tracking. No data sharing. **Do NOT claim "zero data collection"** — it contradicts the Data Safety form.
@@ -206,4 +209,4 @@ blockkitz-website/
 
 ---
 
-*Last updated: 2026-04-25 (v1.0.1 compliance rewrite — 15,000+ levels, Closed Testing, advertising-ID-only data posture)*
+*Last updated: 2026-09-28 (studio attribution rewrite — Hungry Humans / Infinity Tech, no personal-name framing on the site)*
